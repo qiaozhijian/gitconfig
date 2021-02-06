@@ -1,0 +1,22 @@
+[user]
+	name = username
+	email = email
+	password = passwd
+[alias]
+	acp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	acpmy = "!f() { git add -A && git commit -m \"$@\" && git push my; }; f"
+	logg = log --abbrev-commit --pretty=oneline --graph 
+	diffname = diff --stat --name-only
+[credential]
+	helper = store
+[core]
+	filemode = false
+
+[diff]
+    tool = bcompare
+[difftool]
+    prompt = false
+[merge]
+    tool = bcompare
+[mergetool]
+    prompt = false
